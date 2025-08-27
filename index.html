@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day Planner Pro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar / Header -->
+    <header>
+      <h1>🗓️ Day Planner </h1>
+      <input type="date" id="datePicker">
+    </header>
+
+    <!-- Task Input -->
+    <section class="task-input">
+      <form id="planner-form">
+        <input type="time" id="time" required>
+        <input type="text" id="task" placeholder="Enter your task..." required>
+        <select id="priority">
+          <option value="normal">Normal</option>
+          <option value="important">Important</option>
+          <option value="urgent">Urgent</option>
+        </select>
+        <button type="submit" class="add-btn">+ Add Task</button>
+      </form>
+    </section>
+
+    <!-- Task List -->
+    <section class="task-section">
+      <h2 id="selected-date">Tasks</h2>
+      <ul id="task-list" class="task-list"></ul>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

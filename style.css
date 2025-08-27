@@ -1,0 +1,162 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px;
+}
+
+/* Container */
+.app-container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 700px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+  animation: fadeIn 1s ease;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 26px;
+}
+
+#datePicker {
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+}
+
+/* Task Input */
+.task-input {
+  margin-bottom: 20px;
+}
+
+#planner-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#planner-form input, 
+#planner-form select,
+.add-btn {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+}
+
+#planner-form input, #planner-form select {
+  flex: 1;
+}
+
+.add-btn {
+  background: linear-gradient(135deg, #43cea2, #185a9d);
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.add-btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #185a9d, #43cea2);
+}
+
+/* Task Section */
+.task-section h2 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.task-list {
+  list-style: none;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+li {
+  background: rgba(255, 255, 255, 0.15);
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: slideIn 0.4s ease-in-out;
+}
+
+.task-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.task-time {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.task-text {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Priority Colors */
+.normal { border-left: 5px solid #00b894; }
+.important { border-left: 5px solid #fdcb6e; }
+.urgent { border-left: 5px solid #d63031; }
+
+.delete-btn {
+  background: #e74c3c;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.delete-btn:hover {
+  background: #c0392b;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.95);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+@keyframes slideIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  #planner-form {
+    flex-direction: column;
+  }
+}
